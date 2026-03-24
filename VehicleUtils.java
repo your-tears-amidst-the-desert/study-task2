@@ -42,4 +42,9 @@ public class VehicleUtils {
             System.out.println(models[i] + ": " + prices[i] + " руб.");
         }
     }
+
+    public static Transport synchronizedTransport(Transport t) {
+        return new SynchronizedTransportDecorator(t);
+    }
+
 }
